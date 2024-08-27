@@ -2,4 +2,9 @@ services:
   grace:
     image: mikosurge/grace:latest
     restart: always
-    stop_grace_period: 5s
+    stop_grace_period: 10s
+
+  mockserver:
+    image: mikosurge/mockserver:latest
+    restart: always
+    stop_grace_period: 10s

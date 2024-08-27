@@ -32,3 +32,4 @@ rs: down up
 .PHONY: build-integ
 build-integ:
 	@docker build -t mikosurge/grace:latest -f ./build/grace/Dockerfile .
+	# @docker build -t mikosurge/mockserver:latest -f ./build/mockserver/Dockerfile .
