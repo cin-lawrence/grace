@@ -3,8 +3,8 @@ package grace
 import (
 	"context"
 	"errors"
-	"log"
 	"io"
+	"log"
 	"net/http"
 	"os"
 	"os/signal"
@@ -12,7 +12,6 @@ import (
 	"syscall"
 	"time"
 )
-
 
 func sendRequest(ctx context.Context) error {
 	req, err := http.NewRequestWithContext(
@@ -80,7 +79,7 @@ func HttpStopMain() {
 	signal.Notify(signalChan, os.Interrupt, syscall.SIGTERM)
 
 	select {
-	case sig := <- signalChan:
+	case sig := <-signalChan:
 		log.Printf("\nReceived signal: %s, shutting down...\n", sig)
 		cancel()
 	}

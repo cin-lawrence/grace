@@ -28,10 +28,10 @@ func StopChanHandler(stopChan chan bool, index int, wg *sync.WaitGroup) {
 }
 
 func StopChanMain() {
-	stopChan := make (chan bool)
+	stopChan := make(chan bool)
 	var wg sync.WaitGroup
 
-	for i := 1; i <= 3; i ++ {
+	for i := 1; i <= 3; i++ {
 		wg.Add(1)
 		go StopChanHandler(stopChan, i, &wg)
 	}
