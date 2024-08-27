@@ -1,0 +1,5 @@
+services:
+  grace:
+    image: mikosurge/grace:latest
+    restart: always
+    stop_grace_period: 5s
